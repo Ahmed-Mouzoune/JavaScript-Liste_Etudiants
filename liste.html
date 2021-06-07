@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Liste</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script defer type="module" src="./js/list-students.js"></script>
+</head>
+<body>
+    <header class="bg-blue-600 flex justify-center">
+        <h1 class="flex-grow flex items-center p-4 text-3xl">Admin</h1>
+        <nav class="flex-grow">
+            <ul class="h-full flex justify-center items-center text-lg">
+                <li class="m-2 md:m-8"><a href="/">Accueil</a></li>
+                <li class="m-2 md:m-8"><a href="./liste.html">Liste</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="bg-blue-300 w-full p-8">
+        <section>
+            <div class="bg-blue-200 rounded-t-md p-6 shadow-md w-full">
+                <h2 class="text-3xl m-4 text-center font-semibold">Gérer les étudiant.e.s</h2>
+            </div>
+            <div class="bg-white p-6 shadow-md w-full">
+                <form>
+                    <label for="search" class="text-lg">Filtrer la liste d'étudiant.e.s</label><br/>
+                    <input type="text" name="search" id="search" class="w-full border border-gray-500" placeholder="Ex : John Doe">
+                </form>
+                <table id="students-table" class="table-auto w-full text-left mt-4">
+                    <thead>
+                        <tr>
+                            <th>prénom</th>
+                            <th>nom</th>
+                            <th>classe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

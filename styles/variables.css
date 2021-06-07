@@ -1,0 +1,5 @@
+:root {
+    --header-height: 100px;
+    --main-min-height: calc(100vh - var(--header-height));
+    --gap-min: 4px;
+}

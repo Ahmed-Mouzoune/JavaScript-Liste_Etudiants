@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Home</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    
+    <!-- le type="module" est obligatoire dans notre cas, puisque nous utilisons les "import" et "export"
+    dans les fichiers javascript -->
+    <script defer type="module" src="./js/add-student.js"></script>
+</head>
+
+<body>
+    <header class="bg-blue-600 flex justify-center">
+        <h1 class="flex-grow flex items-center p-4 text-3xl">Admin</h1>
+        <nav class="flex-grow">
+            <ul class="h-full flex justify-center items-center text-lg">
+                <li class="m-2 md:m-8"><a href="/">Accueil</a></li>
+                <li class="m-2 md:m-8"><a href="./liste.html">Liste</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="bg-blue-300 w-full grid place-items-center">
+        <div class="bg-blue-200 rounded-md p-6 shadow-md m-4">
+            <h2 class="text-3xl m-4 text-center font-semibold">Ajouter un.e étudiant.e</h2>
+            <form class="flex-form">
+                <div class="flex-form__controls">
+                    <input type="text" name="firstname" id="firstname" placeholder="Prénom">
+                    <input type="text" name="lastname" id="lastname" placeholder="Nom">
+                    <select name="classname" id="classname">
+                        <option value="">Choisissez la classe de l'étudiant.e</option>
+                        <option value="e-business">E-Business</option>
+                        <option value="interactive design">Interactive Design</option>
+                        <option value="web development">Web Development</option>
+                        <option value="initial">Initial</option>
+                    </select>
+                </div>
+                <div class="flex-form__buttons mt-4">
+                    <!-- On met le bouton en "disabled" et avec la classe CSS "btn_disabled" de base -->
+                    <button type="submit" disabled id="btn-add" class="btn--disabled bg-blue-700 text-white">Ajouter</button>
+                    <button type="reset" class="text-white bg-gray-700">Réinitialiser</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

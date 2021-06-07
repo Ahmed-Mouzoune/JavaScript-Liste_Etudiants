@@ -1,0 +1,65 @@
+@import url('./variables.css');
+/* Import des icônes material */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+header {
+    height: var(--header-height);
+}
+
+main {
+    min-height: var(--main-min-height);
+}
+
+input, select, button, label{
+    margin: var(--gap-min);
+}
+
+input, select, button {
+    padding: var(--gap-min);
+    margin: var(--gap-min);
+}
+
+input::placeholder{
+    font-weight: 600;
+}
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-form__buttons {
+    display: flex;
+}
+
+.flex-form__controls {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-form__controls > * {
+    flex: 1 0 30ch;
+}
+
+.flex-form__buttons > * {
+    flex: 1 0 40%;
+}
+
+th {
+    text-transform: capitalize;
+}
+
+
+#students-table {
+    margin-left: var(--gap-min);
+    margin-right: var(--gap-min);
+}
+
+.btn--disabled {
+    background-color: grey;
+    cursor: default;
+}
+
+.hide {
+    display: none;
+}
